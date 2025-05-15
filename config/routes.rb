@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   # root "posts#index"
   resources :cars, only: %i[index show] do
     resources :reviews, only: %i[index show new create]
-    # resources :favourites, only: %i[index show]
+    resources :favourites, only: %i[new create]
   end
+
+  resources :favourites, only: %i[index destroy]
 end

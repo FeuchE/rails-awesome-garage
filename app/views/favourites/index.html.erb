@@ -1,0 +1,12 @@
+<div class: "container">
+  <h1>My Garage</h1>
+  <ul>
+    <% @favourites.each do |favourite| %>
+      <li><%= "#{favourite.car.brand} #{favourite.car.model}" %>
+        <%= form_with url: favourite_path(favourite), method: :delete, class: "d-inline" do %>
+          <%= submit_tag 'Delete', data: { confirm: "Are you sure?" }, class: "btn btn-link p-0 m-0 align-baseline" %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
