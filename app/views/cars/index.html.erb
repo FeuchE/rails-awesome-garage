@@ -1,7 +1,5 @@
-<div class: "container">
-  <ul>
-    <% @cars.each do |car| %>
-      <li><%= link_to "#{car.brand} #{car.model}", car_path(car) %></li>
-    <% end %>
-  </ul>
+<div class= "container">
+  <% @cars.each do |car| %>
+    <%= render 'index_car_card', brand: car.brand, model: car.model, timestamp: car.created_at, image_url: car.image_url, car: car %>
+  <% end %>
 </div>

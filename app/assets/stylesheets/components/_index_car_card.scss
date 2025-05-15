@@ -1,0 +1,49 @@
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.index-car-card {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 700px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text {
+  background-color: white;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+
+  h3 {
+    color: red;
+    font-weight: bold;
+  }
+
+  h4 {
+    color: $gray;
+    font-weight: bold;
+  }
+}
+
+.card-image {
+  width: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.card-link {
+  display: flex;
+  padding: 10px;
+
+  .link {
+    text-decoration: none;
+    color: $gray;
+    font-weight: bold;
+  }
+}
