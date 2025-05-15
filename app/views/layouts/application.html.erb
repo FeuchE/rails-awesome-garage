@@ -12,6 +12,13 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Awesome Garage</a>
+        <%= link_to "Home", cars_path, class: "btn btn-success" %>
+        <%= link_to "My Garage", favourites_path, class: "btn btn-success" %>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
