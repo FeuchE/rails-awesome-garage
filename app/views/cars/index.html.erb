@@ -1,7 +1,7 @@
 <div class: "container">
   <ul>
     <% @cars.each do |car| %>
-      <li><%= "#{car.brand} #{car.model}" %></li>
+      <li><%= link_to "#{car.brand} #{car.model}", car_path(car) %></li>
     <% end %>
   </ul>
 </div>
