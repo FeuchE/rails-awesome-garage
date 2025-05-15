@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_05_15_081808) do
+ActiveRecord::Schema[7.1].define(version: 2025_05_15_170704) do
   create_table "cars", force: :cascade do |t|
     t.string "brand"
     t.string "model"
@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_15_081808) do
     t.integer "owner_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_url"
     t.index ["owner_id"], name: "index_cars_on_owner_id"
   end
 
