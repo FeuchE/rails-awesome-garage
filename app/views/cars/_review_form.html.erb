@@ -1,0 +1,7 @@
+<div class= "review-form-container">
+  <%= simple_form_for [car, review] do |f| %>
+    <%= f.input :comment, input_html: { placeholder: "Your comment goes here.." } %>
+    <%= f.input :rating, :collection => 0..5 %>
+    <%= f.submit %>
+  <% end %>
+</div>
