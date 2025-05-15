@@ -7,7 +7,11 @@
     <li><%= "Fuel type: #{@car.fuel}" %></li>
   </ul>
   <hr>
-  <%= render 'cars/favourite_form', car: @car, favourite: @favourite %>
+  <% if Favourite.exists?(car_id: @car.id) %>
+    <p>Already in Garage</p>
+  <% else %>
+    <%= render 'cars/favourite_form', car: @car, favourite: @favourite %>
+  <% end %>
   <hr>
   <h3>Add a review</h3>
     <%= render 'cars/review_form', car: @car, review: @review %>
