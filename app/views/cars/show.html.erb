@@ -1,26 +1,13 @@
 <div class= "container">
-  <h1>Car details</h1>
-  <ul>
-    <li><%= "Brand: #{@car.brand}" %></li>
-    <li><%= "Model: #{@car.model}" %></li>
-    <li><%= "Year: #{@car.year}" %></li>
-    <li><%= "Fuel type: #{@car.fuel}" %></li>
-  </ul>
-  <img src="<%= @car.image_url%>">
-  <hr>
-  <% if Favourite.exists?(car_id: @car.id) %>
-    <p>This car is already parked in your Garage</p>
-  <% else %>
-    <%= render 'cars/favourite_form', car: @car, favourite: @favourite %>
-  <% end %>
-  <hr>
-  <h3>Add a review</h3>
-    <%= render 'cars/review_form', car: @car, review: @review %>
-  <hr>
-  <h3>Reviews</h3>
-    <ul>
-      <% @reviews.each do |review| %>
-        <li><%= "#{review.comment} (#{review.rating}/5)" %></li>
-      <% end %>
-    </ul>
+  <%= render 'show_car_card',
+    car: @car,
+    brand: @car.brand,
+    model: @car.model,
+    year: @car.year,
+    fuel: @car.fuel,
+    image_url: @car.image_url,
+    favourite: @favourite,
+    reviews: @reviews,
+    review: @review
+  %>
 </div>

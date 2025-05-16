@@ -1,7 +1,7 @@
 <div class= "review-form-container">
   <%= simple_form_for [car, review] do |f| %>
-    <%= f.input :comment, input_html: { placeholder: "Your comment goes here.." } %>
+    <%= f.input :comment, as: :text, input_html: { rows: 4, placeholder: "Your comment goes here..", class: "form-control" } %>
     <%= f.input :rating, :collection => 0..5 %>
-    <%= f.submit %>
+    <%= f.submit class:'submit-btn' %>
   <% end %>
 </div>

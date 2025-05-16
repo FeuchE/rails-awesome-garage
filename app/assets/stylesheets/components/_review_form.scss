@@ -1,0 +1,19 @@
+.review-form-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  .form-control {
+    width: 300px !important;
+    height: 70px !important;
+    resize: vertical !important;
+    white-space: pre-wrap !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    overflow-x: hidden !important;
+  }
+
+  .submit-btn {
+    text-align: right;
+  }
+}

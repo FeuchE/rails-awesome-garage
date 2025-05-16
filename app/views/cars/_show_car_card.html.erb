@@ -1,0 +1,35 @@
+<div class='card-wrapper'>
+  <div class='show-car-card'>
+    <div class='card-image' style="background-image: url('<%= image_url %>');">
+      <div class='garage-element'>
+        <% if Favourite.exists?(car_id: car.id) %>
+          <p class='parked-text'>This car is already parked in your Garage</p>
+        <% else %>
+          <%= render 'cars/favourite_form', car: car, favourite: favourite %>
+        <% end %>
+      </div>
+    </div>
+    <div class='card-content d-flex justify-content-between align-items-center'>
+      <div class='card-text'>
+        <h4><%= brand %></h4>
+        <h5><%= model %></h5>
+        <p><%= year %></p>
+        <p><%= fuel %></p>
+      </div>
+      <div class='review-form'>
+        <%= render 'cars/review_form', car: car, review: review %>
+      </div>
+    </div>
+    <div class='car-reviews'>
+      <hr>
+      <% reviews.each do |review| %>
+        <p><%= "#{review.comment}" %>
+          <span class="star-rating">
+            <%= '★' * review.rating %><%= '☆' * (5 - review.rating) %>
+          </span>
+        </p>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+</div>
