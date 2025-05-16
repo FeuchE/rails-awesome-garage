@@ -1,12 +1,12 @@
 <div class='card-wrapper'>
   <div class= 'index-car-card'>
-    <div class= 'card-text'>
+    <div class= 'index-card-text'>
       <h3><%= brand %></h3>
       <h4><%= model %></h4>
       <p><%= timestamp %></p>
     </div>
     <div>
-      <img src='<%= image_url %>' class= 'card-image' alt='Car image'>
+      <img src='<%= image_url %>' class= 'index-card-image' alt='Car image'>
     </div>
     <div class='card-link'>
       <%= link_to 'Click to see details, leave a review or add to your garage', car_path(car), class:'link' %>

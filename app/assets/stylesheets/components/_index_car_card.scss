@@ -13,9 +13,9 @@
   flex-direction: column;
 }
 
-.card-text {
+.index-card-text {
   background-color: white;
-  padding-top: 10px;
+  padding-top: 10px !important;
   padding-left: 10px;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -26,12 +26,12 @@
   }
 
   h4 {
-    color: $gray;
+    color: $gray !important;
     font-weight: bold;
   }
 }
 
-.card-image {
+.index-card-image {
   width: 100%;
   object-fit: cover;
   flex-shrink: 0;
