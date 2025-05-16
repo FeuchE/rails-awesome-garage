@@ -14,3 +14,21 @@
 // Your CSS components
 @import "components/banner";
 @import "components/index_car_card";
+@import "components/favourite_card";
+
+h1 {
+  color: red;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.favourites-container {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.favourites-title {
+  text-align: left;
+  margin-bottom: 20px;
+}

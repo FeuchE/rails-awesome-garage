@@ -1,0 +1,16 @@
+<div class='card-wrapper'>
+  <div class='favourite-card d-flex'>
+    <div class='favourite-image' style="background-image: url('<%= image_url %>');">
+    </div>
+    <div class='favourite-content'>
+      <h4><%= link_to brand, car_path(car), class:"brand-link" %></h4>
+      <h5><%= link_to model, car_path(car), class:"model-link" %></h5>
+      <p><%= year %> | <%= fuel %></p>
+    </div>
+    <div class='delete-link'>
+      <%= link_to favourite_path(favourite), data: { turbo_method: :delete, confirm: "Are you sure?" }, class: "btn btn-link p-0 m-0 align-baseline" do %>
+        <i class="fa-solid fa-trash"></i>
+      <% end %>
+    </div>
+  </div>
+</div>
